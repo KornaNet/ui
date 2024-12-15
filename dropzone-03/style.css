@@ -12,7 +12,7 @@
     --bg: #F7F8F9;
     --secondary: #FEFFFF;
     --dropzone-bg: #fff;
-    --gray: #D3D3D3;
+    --gray: #767676;
     --border: #EDF1F3;
     --dropzone-border: #D4DCE6;
     --headline: #211E30;
@@ -24,7 +24,7 @@
 body {
     font-family: 'Work Sans', 
     sans-serif;
-    background: var(--bg);
+    background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,6 +82,7 @@ body {
 .dropzone-description {
     margin-top: 1rem;
     display: flex;
+    gap: 1rem;
     justify-content: space-between;
 }
 
@@ -99,7 +100,8 @@ body {
     left: 0;
 }
 
-.dropzone-area .file-upload-icon svg {
+.dropzone-area 
+.file-upload-icon svg {
     height: 6rem;
     max-width: 6rem;
     width: 100%;
@@ -108,12 +110,14 @@ body {
 }
 
 .dropzone-area:hover {
-    background: var(--dropzone-over);
+    background: 
+        var(--dropzone-over);
 }
 
 .dropzone--over {
     border: 2px solid var(--primary);
-    background: var(--dropzone-over);
+    background: 
+        var(--dropzone-over);
 }
 
 .dropzone-actions {
@@ -129,7 +133,8 @@ body {
     min-height: 3rem;
     font-size: 1.2rem;
     border: none;
-    transition: background 0.3s ease;
+    transition: background 
+        0.3s ease;
 }
 
 .dropzone-help {

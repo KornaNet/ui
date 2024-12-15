@@ -558,6 +558,8 @@ h1 {
   border-radius: 50%;
   width: 2.25rem;
   height: 2.25rem;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
 
 .profile-wrapper {

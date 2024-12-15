@@ -1,7 +1,3 @@
-
-
-
-
 const dropzoneBox = document.getElementsByClassName("dropzone-box")[0];
 const inputFiles = document.querySelectorAll(
   ".dropzone-area input[type='file']"
@@ -13,7 +9,7 @@ const fileLimit = 25000000;
 
 inputElement.addEventListener("change", (e) => {
   if(inputElement.files[0].size > fileLimit) {
-    alert("File is over 25MB!");
+    inputElement.setCustomValidity("File is over 25MB!");
     return
   }
 
@@ -37,7 +33,7 @@ dropZoneElement.addEventListener("drop", (e) => {
   e.preventDefault();
 
   if(e.dataTransfer.files[0].size > fileLimit) {
-    alert("File is over 25MB!");
+    inputElement.setCustomValidity("File is over 25MB!");
     dropZoneElement.classList.remove("dropzone--over");
 
     return
@@ -71,9 +67,7 @@ dropzoneBox.addEventListener("submit", (e) => {
   const myFiled = document.getElementById("upload-file");
 
   if(myFiled.files[0].size > fileLimit) {
-    alert("File is over 25MB!");
+    inputElement.setCustomValidity("File is over 25MB!");
   }
-
-  console.log(myFiled.files[0]);
-
+  inputElement.setCustomValidity("This is just demo, no files were uploaded.");
 });

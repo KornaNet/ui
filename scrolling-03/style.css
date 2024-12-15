@@ -1,3 +1,6 @@
+
+
+
 :root {
     --accent: rgb(212, 255, 0);
     --accent-hover: rgb(190, 228, 0);
@@ -12,18 +15,20 @@
     --error: rgba(232, 113, 113, 1);
     --white: rgba(255, 255, 255, 1);
     --accent-text: #163300;
-}
-
-body {
-    padding: 16px;
-    display: flex;
-    height: 100vh;
-    min-width: 320px;
-    font-family: "Inter", sans-serif;
+    --scrollbar-thumb: #C6CDC1;
 }
 
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 2rem;
+    display: flex;
+    height: 100vh;
+    font-family: "Inter", sans-serif;
 }
 
 .top-bar {
@@ -143,6 +148,17 @@ body {
     width: 100%;
     flex-direction: row;
     overflow: auto;
+}
+
+::-webkit-scrollbar {
+    height: 0.6rem;
+    background: var(--secondary);
+    border-radius: 9.99rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 9.99rem;
 }
 
 .event {
